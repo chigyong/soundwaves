@@ -14,6 +14,7 @@ html {
 
 body {
   background-color: #2F303A;
+  overflow-x: hidden;
 }
 
 nav {
@@ -38,6 +39,10 @@ nav .navbar-links li a {
   padding: 1rem;
   display: block;
 }
+nav .navbar-links li a:hover {
+  color: red;
+  transition: 0.5s ease;
+}
 nav .menu {
   position: absolute;
   flex-direction: column;
@@ -55,41 +60,39 @@ section {
   height: 100vh;
 }
 
-.home {
-  padding-top: 12.5rem;
-}
 .home .container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
-.home .container .left img {
-  height: 560px;
+.home .left {
+  padding-top: 16rem;
 }
-.home .container .right {
+.home .left img {
+  height: 500px;
+}
+.home .right {
   color: white;
-  padding-top: 5rem;
+  padding: 0 15rem 0 0;
 }
-.home .container .right h1 {
+.home .right h1 {
   font-size: 40px;
-  font-weight: bold;
 }
-.home .container .right p {
+.home .right p {
   font-size: 20px;
-  line-height: 50px;
-  padding-bottom: 1rem;
 }
-.home .container .right a {
+.home .right button {
+  padding: 5px 25px;
   background-color: #4E7EDB;
-  border-radius: 15px;
-  padding: 5px 30px;
   color: white;
+  border: none;
+  border-radius: 15px;
+  margin: 1rem 0;
 }
 .home .ellipse-icon {
   position: absolute;
-  width: 427.61px;
-  height: 398.58px;
-  left: 1090px;
-  top: 500px;
+  left: 75rem;
+  top: 26rem;
 }
 
 @media only screen and (max-width: 768px) {
@@ -103,6 +106,10 @@ section {
   nav .navbar-links {
     width: 100%;
     display: none;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    animation: slide 0.5s ease-in-out;
   }
   nav .navbar-links ul {
     flex-direction: column;
@@ -111,14 +118,24 @@ section {
   nav .navbar-links li a {
     text-align: center;
   }
+  nav .navbar-links.active {
+    display: flex;
+  }
   .home .container {
-    grid-template-columns: repeat(1, 1fr);
-    padding: 0 5rem;
+    flex-direction: column;
+  }
+  .home .container .left {
+    padding-top: 10rem;
   }
   .home .container .left img {
     height: 360px;
   }
-  .ellipse-icon {
+  .home .ellipse-icon {
     display: none;
+  }
+}
+@keyframes slide {
+  0% {
+    transform: translateX(-500px);
   }
 }/*# sourceMappingURL=main.css.map */
