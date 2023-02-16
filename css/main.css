@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #2F303A;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+}
+nav h2 {
+  background: linear-gradient(#CE6262, #895276);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+nav .navbar-links ul {
+  display: flex;
+}
+nav .navbar-links li a {
+  color: white;
+  padding: 1rem;
+  display: block;
+}
+nav .menu {
+  position: absolute;
+  flex-direction: column;
+  top: 1rem;
+  right: 1rem;
+  display: none;
+}
+nav .menu .bars {
+  padding: 2px 15px;
+  margin: 3px;
+  background-color: white;
+}
+
+section {
+  height: 100vh;
+}
+
+.home {
+  padding-top: 12.5rem;
+}
+.home .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.home .container .left img {
+  height: 560px;
+}
+.home .container .right {
+  color: white;
+  padding-top: 5rem;
+}
+.home .container .right h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+.home .container .right p {
+  font-size: 20px;
+  line-height: 50px;
+  padding-bottom: 1rem;
+}
+.home .container .right a {
+  background-color: #4E7EDB;
+  border-radius: 15px;
+  padding: 5px 30px;
+  color: white;
+}
+.home .ellipse-icon {
+  position: absolute;
+  width: 427.61px;
+  height: 398.58px;
+  left: 1090px;
+  top: 500px;
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav .menu {
+    display: flex;
+  }
+  nav .navbar-links {
+    width: 100%;
+    display: none;
+  }
+  nav .navbar-links ul {
+    flex-direction: column;
+    width: 100%;
+  }
+  nav .navbar-links li a {
+    text-align: center;
+  }
+  .home .container {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 5rem;
+  }
+  .home .container .left img {
+    height: 360px;
+  }
+  .ellipse-icon {
+    display: none;
+  }
+}/*# sourceMappingURL=main.css.map */
