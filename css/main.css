@@ -130,8 +130,34 @@ section {
   .home .container .left img {
     height: 360px;
   }
+  .home .container .right {
+    padding-top: 3rem;
+  }
   .home .ellipse-icon {
     display: none;
+  }
+}
+@media only screen and (max-width: 436px) {
+  .home .container .left img {
+    height: 270px;
+  }
+  .home .container .right {
+    padding: 1rem;
+  }
+  .home .ellipse-icon {
+    display: none;
+    height: 200px;
+    left: 14rem;
+    top: 36rem;
+  }
+}
+@media only screen and (max-width: 321px) {
+  .home .container .right h1 {
+    font-size: 20px;
+  }
+  .home .container .right p {
+    font-size: 15px;
+    width: 80%;
   }
 }
 @keyframes slide {
