@@ -66,10 +66,10 @@ section {
   justify-content: space-evenly;
 }
 .home .left {
-  padding-top: 16rem;
+  padding-top: 9.5rem;
 }
 .home .left img {
-  height: 500px;
+  height: 600px;
 }
 .home .right {
   color: white;
@@ -93,6 +93,45 @@ section {
   position: absolute;
   left: 75rem;
   top: 26rem;
+}
+
+.about .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.about .left {
+  color: white;
+  padding: 0 5rem;
+}
+.about .left h1 {
+  font-size: 64px;
+  padding: 5rem 0;
+}
+.about .left p {
+  line-height: 30px;
+  padding: 1rem 0;
+  text-align: justify;
+}
+.about .left button {
+  padding: 5px 25px;
+  background-color: #4E7EDB;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  margin: 1rem 0;
+}
+.about .left button:hover {
+  background-color: white;
+  color: #4E7EDB;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.about .right {
+  padding-top: 15rem;
+}
+.about .right img {
+  height: 600px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -136,6 +175,24 @@ section {
   .home .ellipse-icon {
     display: none;
   }
+  .about .container {
+    flex-direction: column;
+  }
+  .about .container .left {
+    padding: 0 2rem;
+  }
+  .about .container .left h1 {
+    font-size: 40px;
+  }
+  .about .container .left p {
+    width: 100%;
+  }
+  .about .container .right {
+    padding-top: 2rem;
+  }
+  .about .container .right img {
+    height: 360px;
+  }
 }
 @media only screen and (max-width: 436px) {
   .home .container .left img {
@@ -144,11 +201,32 @@ section {
   .home .container .right {
     padding: 1rem;
   }
+  .home .container .right p {
+    width: 90%;
+  }
   .home .ellipse-icon {
     display: none;
     height: 200px;
     left: 14rem;
     top: 36rem;
+  }
+  .about .container {
+    flex-direction: column;
+  }
+  .about .container .left {
+    padding: 0 1rem;
+  }
+  .about .container .left h1 {
+    font-size: 40px;
+  }
+  .about .container .left p {
+    width: 90%;
+  }
+  .about .container .right {
+    padding: 2rem 5rem 0 0;
+  }
+  .about .container .right img {
+    height: 270px;
   }
 }
 @media only screen and (max-width: 321px) {
@@ -158,6 +236,22 @@ section {
   .home .container .right p {
     font-size: 15px;
     width: 80%;
+  }
+  .about .container .left {
+    padding: 0 2rem;
+  }
+  .about .container .left h1 {
+    font-size: 20px;
+  }
+  .about .container .left p {
+    width: 80%;
+    font-size: 15px;
+  }
+  .about .container .right {
+    padding-right: 6rem;
+  }
+  .about .container .right img {
+    height: 270px;
   }
 }
 @keyframes slide {
